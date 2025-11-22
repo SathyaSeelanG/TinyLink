@@ -38,7 +38,7 @@ All requests and responses use `application/json` content type.
 
 **Local Development:**
 ```
-http://localhost:3000
+https://tiny-link-clone.vercel.app
 ```
 
 **Production:**
@@ -76,7 +76,7 @@ Check the health and status of the API.
 
 **Example:**
 ```bash
-curl http://localhost:3000/healthz
+curl https://tiny-link-clone.vercel.app/healthz
 ```
 
 ---
@@ -133,7 +133,7 @@ Create a new shortened URL.
 
 **Example:**
 ```bash
-curl -X POST http://localhost:3000/api/links \
+curl -X POST https://tiny-link-clone.vercel.app/api/links \
   -H "Content-Type: application/json" \
   -d '{
     "url": "https://github.com/SathyaSeelanG/TinyUrl",
@@ -177,7 +177,7 @@ Get all links created by the current user.
 
 **Example:**
 ```bash
-curl http://localhost:3000/api/links
+curl https://tiny-link-clone.vercel.app/api/links
 ```
 
 ---
@@ -218,7 +218,7 @@ Get detailed information about a specific link.
 
 **Example:**
 ```bash
-curl http://localhost:3000/api/links/abc123
+curl https://tiny-link-clone.vercel.app/api/links/abc123
 ```
 
 ---
@@ -253,7 +253,7 @@ Delete a specific link. Only the owner can delete their links.
 
 **Example:**
 ```bash
-curl -X DELETE http://localhost:3000/api/links/abc123
+curl -X DELETE https://tiny-link-clone.vercel.app/api/links/abc123
 ```
 
 ---
@@ -286,7 +286,7 @@ Redirect to the original URL and track the click.
 
 **Example:**
 ```bash
-curl -L http://localhost:3000/abc123
+curl -L https://tiny-link-clone.vercel.app/abc123
 # Redirects to the original URL
 ```
 
@@ -390,7 +390,7 @@ Currently, there is **no rate limiting** implemented. However, in production, co
 
 ```bash
 # 1. Create a new link
-curl -X POST http://localhost:3000/api/links \
+curl -X POST https://tiny-link-clone.vercel.app/api/links \
   -H "Content-Type: application/json" \
   -d '{"url": "https://github.com/SathyaSeelanG/TinyUrl", "code": "github"}'
 
@@ -404,14 +404,14 @@ curl -X POST http://localhost:3000/api/links \
 # }
 
 # 2. Get all your links
-curl http://localhost:3000/api/links
+curl https://tiny-link-clone.vercel.app/api/links
 
 # 3. Access the short link (redirect)
-curl -L http://localhost:3000/github
+curl -L https://tiny-link-clone.vercel.app/github
 # Redirects to https://github.com/SathyaSeelanG/TinyUrl
 
 # 4. Get link stats
-curl http://localhost:3000/api/links/github
+curl https://tiny-link-clone.vercel.app/api/links/github
 
 # Response:
 # {
@@ -422,7 +422,7 @@ curl http://localhost:3000/api/links/github
 # }
 
 # 5. Delete the link
-curl -X DELETE http://localhost:3000/api/links/github
+curl -X DELETE https://tiny-link-clone.vercel.app/api/links/github
 
 # Response:
 # {

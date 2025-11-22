@@ -69,7 +69,7 @@ This creates the `links` table, indexes, and user scoping columns.
 ### Run the App
 
 ```bash
-npm run dev     # Start development server at http://localhost:3000
+npm run dev     # Start development server at https://tiny-link-clone.vercel.app
 npm run build   # Production build
 npm run start   # Run production build
 npm run lint    # Static analysis
@@ -79,7 +79,7 @@ npm run lint    # Static analysis
 
 ### Base URLs
 
-- **Local**: `http://localhost:3000`
+- **Local**: `https://tiny-link-clone.vercel.app`
 - **Production**: set via `NEXT_PUBLIC_APP_URL`
 
 ### Authentication
@@ -102,7 +102,7 @@ Cookie-based user IDs; each visitor automatically receives a `user_id` cookie, s
 **Create a Link**
 
 ```bash
-curl -X POST http://localhost:3000/api/links \
+curl -X POST https://tiny-link-clone.vercel.app/api/links \
   -H "Content-Type: application/json" \
   -d '{
     "url": "https://example.com/docs",
@@ -113,25 +113,25 @@ curl -X POST http://localhost:3000/api/links \
 **List Links**
 
 ```bash
-curl http://localhost:3000/api/links
+curl https://tiny-link-clone.vercel.app/api/links
 ```
 
 **Get Link Details**
 
 ```bash
-curl http://localhost:3000/api/links/docs01
+curl https://tiny-link-clone.vercel.app/api/links/docs01
 ```
 
 **Delete a Link**
 
 ```bash
-curl -X DELETE http://localhost:3000/api/links/docs01
+curl -X DELETE https://tiny-link-clone.vercel.app/api/links/docs01
 ```
 
 **Redirect**
 
 ```bash
-curl -I http://localhost:3000/docs01
+curl -I https://tiny-link-clone.vercel.app/docs01
 # → 302 redirect to https://example.com/docs
 ```
 

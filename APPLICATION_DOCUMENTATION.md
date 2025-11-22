@@ -590,15 +590,15 @@ DATABASE_URL=your_neon_postgres_url
 
 ```bash
 # Test health endpoint
-curl http://localhost:3000/healthz
+curl https://tiny-link-clone.vercel.app/healthz
 
 # Test create link
-curl -X POST http://localhost:3000/api/links \
+curl -X POST https://tiny-link-clone.vercel.app/api/links \
   -H "Content-Type: application/json" \
   -d '{"url": "https://example.com"}'
 
 # Test redirect
-curl -I http://localhost:3000/[code]
+curl -I https://tiny-link-clone.vercel.app/[code]
 ```
 
 ---

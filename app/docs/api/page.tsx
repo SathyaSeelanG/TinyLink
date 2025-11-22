@@ -53,7 +53,7 @@ const endpoints: Endpoint[] = [
 }`
             }
         ],
-        curlExample: `curl http://localhost:3000/healthz`
+        curlExample: `curl https://tiny-link-clone.vercel.app/healthz`
     },
     {
         method: "POST",
@@ -109,7 +109,7 @@ const endpoints: Endpoint[] = [
 }`
             }
         ],
-        curlExample: `curl -X POST http://localhost:3000/api/links \\
+        curlExample: `curl -X POST https://tiny-link-clone.vercel.app/api/links \\
   -H "Content-Type: application/json" \\
   -d '{
     "url": "https://github.com/SathyaSeelanG/TinyUrl",
@@ -138,7 +138,7 @@ const endpoints: Endpoint[] = [
 ]`
             }
         ],
-        curlExample: `curl http://localhost:3000/api/links`
+        curlExample: `curl https://tiny-link-clone.vercel.app/api/links`
     },
     {
         method: "GET",
@@ -167,7 +167,7 @@ const endpoints: Endpoint[] = [
 }`
             }
         ],
-        curlExample: `curl http://localhost:3000/api/links/abc123`
+        curlExample: `curl https://tiny-link-clone.vercel.app/api/links/abc123`
     },
     {
         method: "DELETE",
@@ -190,7 +190,7 @@ const endpoints: Endpoint[] = [
 }`
             }
         ],
-        curlExample: `curl -X DELETE http://localhost:3000/api/links/abc123`
+        curlExample: `curl -X DELETE https://tiny-link-clone.vercel.app/api/links/abc123`
     },
     {
         method: "GET",
@@ -211,7 +211,7 @@ const endpoints: Endpoint[] = [
 }`
             }
         ],
-        curlExample: `curl -L http://localhost:3000/abc123`
+        curlExample: `curl -L https://tiny-link-clone.vercel.app/abc123`
     }
 ]
 
@@ -267,7 +267,7 @@ export default function ApiDocsPage() {
                         <Card>
                             <CardContent className="p-4">
                                 <p className="text-sm text-muted-foreground mb-1">Base URL (Local)</p>
-                                <code className="text-sm font-mono">http://localhost:3000</code>
+                                <code className="text-sm font-mono">https://tiny-link-clone.vercel.app</code>
                             </CardContent>
                         </Card>
                         <Card>
