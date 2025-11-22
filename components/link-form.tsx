@@ -197,12 +197,13 @@ export function LinkForm({ onSuccess }: LinkFormProps) {
               <label className="block text-sm font-medium mb-2">Custom Code (optional)</label>
               <Input
                 type="text"
-                placeholder="abc123 (6-8 characters, alphanumeric)"
+                placeholder="abc123 (6-8 lowercase letters or digits)"
                 value={code}
-                onChange={(e) => setCode(e.target.value)}
+                onChange={(e) => setCode(e.target.value.toLowerCase())}
                 maxLength={8}
                 disabled={loading}
-                pattern="[A-Za-z0-9]"
+                pattern="[a-z0-9]{6,8}"
+                title="Enter 6-8 lowercase letters or digits"
               />
             </div>
 

@@ -8,11 +8,11 @@ export const isValidUrl = (url: string): boolean => {
 }
 
 export const isValidCode = (code: string): boolean => {
-  return /^[A-Za-z0-9]{6,8}$/.test(code)
+  return /^[a-z0-9]{6,8}$/.test(code)
 }
 
 export const generateCode = (): string => {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789"
   let code = ""
   for (let i = 0; i < 7; i++) {
     code += chars.charAt(Math.floor(Math.random() * chars.length))
